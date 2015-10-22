@@ -108,7 +108,7 @@ def nearSiliconCheck(ra_deg,dec_deg,FovObj,max_sep=8.2):
 
 
 def getRaDecRollFromFieldnum(fieldnum):
-    if fieldnum in [11,12,13]:
+    if fieldnum in [13]:
         print('''Danger! The field you are searching is not yet fixed and is only the proposed position
             please don't use this position for target selection''')
     if fieldnum not in [100,0,1,2,3,4,5,6,7,8,9,10,11,12,13]:
@@ -169,10 +169,10 @@ def getRaDecRollFromFieldnum(fieldnum):
         ra_deg = 260.3880071
         dec_deg = -23.9759578
         scRoll_deg = 176.5837078
-    elif fieldnum == 12: # not final
-        ra_deg = 349.8034749
-        dec_deg = -5.8755768
-        scRoll_deg = -156.8551298
+    elif fieldnum == 12:
+        ra_deg = 351.6775368
+        dec_deg = -5.095648
+        scRoll_deg = -156.7203394
     elif fieldnum == 13: #not final
         ra_deg = 73.0469956
         dec_deg = 20.8139062
