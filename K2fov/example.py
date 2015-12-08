@@ -1,3 +1,4 @@
+from __future__ import print_function
 import matplotlib.pyplot as mp
 import numpy as np
 
@@ -27,14 +28,14 @@ def main():
     #Is a given ra/dec on silicon?
     try:
         ch = k.pickAChannel(ra_deg, dec_deg)
-        print "Star is on channel %i Mod-out %s" %(ch, fov.modOutFromChannel(ch))
+        print("Star is on channel %i Mod-out %s" %(ch, fov.modOutFromChannel(ch)))
     except ValueError:
-        print "Star is not on silicon"
-        print "Caution: Stars within 5 pix of channel edges are not found by this algorithm"
+        print("Star is not on silicon")
+        print("Caution: Stars within 5 pix of channel edges are not found by this algorithm")
 
 
     ch, col, row = k.getChannelColRow(ra_deg, dec_deg)
-    print "Star is on channel %i Col %.1f Row %.1f" %(ch, col, row)
+    print("Star is on channel %i Col %.1f Row %.1f" %(ch, col, row))
 
 
     if wantPlot:
