@@ -12,6 +12,7 @@ from . import projection as proj
 from . import rotate2 as r
 from . import greatcircle as gcircle
 from . import definefov
+from . import logger
 
 from . import DEFAULT_PADDING
 
@@ -238,7 +239,7 @@ class KeplerFov():
         row = np.zeros(len(ch))
         for channel in set(ch):
             mask = (ch == channel)
-            col[mask], row[mask] = self.getColRowWithinChannelList(ra[mask], dec[mask], channel, 
+            col[mask], row[mask] = self.getColRowWithinChannelList(ra[mask], dec[mask], channel,
                                                         wantZeroOffset, allowIllegalReturnValues)
         return (ch, col, row)
 
